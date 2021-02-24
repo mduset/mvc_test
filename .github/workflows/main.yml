@@ -1,0 +1,17 @@
+on: push
+name: Publicant a Web
+jobs:
+  web-deploy:
+    name: Desplegar
+    runs-on: ubuntu-latest
+    steps:
+    - name: Obtenint últim codi
+      uses: actions/checkout@v2.3.2
+
+    - name: Pujar fitxers al FTP
+      uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      with:
+        server: 188.165.132.206
+        username: ngloba.com
+        password: !7O8qjl5
+        server-dir: httpdocs/projectes/mvc_test/
