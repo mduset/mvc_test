@@ -13,5 +13,5 @@ jobs:
       with:
         server: 188.165.132.206
         username: ngloba.com
-        password: !7O8qjl5
+        password: ${{ secrets.FTP_PASSWORD }}
         server-dir: httpdocs/projectes/mvc_test/
